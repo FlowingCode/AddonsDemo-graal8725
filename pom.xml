@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.flowingcode.vaadin.addons</groupId>
+    <artifactId>addons-demos-24</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <vaadin.version>24.3.9</vaadin.version>
+    
+        <commons-demo.version>4.0.1-SNAPSHOT</commons-demo.version>
+    
+        <app-layout.version>6.0.0-SNAPSHOT</app-layout.version>
+        <badge-list.version>1.1.0-SNAPSHOT</badge-list.version>
+        <carousel.version>2.1.4-SNAPSHOT</carousel.version>
+        <calendar.version>4.2.1-SNAPSHOT</calendar.version>
+        <chat-assistant.version>1.0.1-SNAPSHOT</chat-assistant.version>
+        <chipfield.version>2.6.2-SNAPSHOT</chipfield.version>
+        <day-of-week-selector.version>1.0.1-SNAPSHOT</day-of-week-selector.version>
+        <enhanced-tabs.version>1.0.1-SNAPSHOT</enhanced-tabs.version>
+        <error-window.version>4.0.1-SNAPSHOT</error-window.version>
+        <extended-login.version>1.0.2-SNAPSHOT</extended-login.version>
+        <filterable-layout.version>2.0.3-SNAPSHOT</filterable-layout.version>
+        <flip-card.version>1.0.1-SNAPSHOT</flip-card.version>
+        <font-awesome-iron-iconset.version>5.2.3-SNAPSHOT</font-awesome-iron-iconset.version>
+        <github-buttons.version>1.0.1-SNAPSHOT</github-buttons.version>
+        <google-maps.version>1.12.0-SNAPSHOT</google-maps.version>
+        <granite-alert.version>2.0.1-SNAPSHOT</granite-alert.version>
+        <grid-exporter.version>2.3.1-SNAPSHOT</grid-exporter.version>
+        <grid-helpers.version>1.4.0-SNAPSHOT</grid-helpers.version>        
+        <image-comparison-slider.version>1.0.1-SNAPSHOT</image-comparison-slider.version>
+        <iron-icons.version>2.0.2-SNAPSHOT</iron-icons.version>        
+        <orgchart.version>5.0.1-SNAPSHOT</orgchart.version>
+        <rss-items.version>2.0.5-SNAPSHOT</rss-items.version>
+        <share-easy.version>1.1.1-SNAPSHOT</share-easy.version>
+        <simple-timer.version>2.2.0-SNAPSHOT</simple-timer.version>
+        <twincolgrid.version>2.9.6-SNAPSHOT</twincolgrid.version>
+        <vertical-menu.version>2.0.3-SNAPSHOT</vertical-menu.version>
+        <wcstories.version>2.0.1-SNAPSHOT</wcstories.version>
+        <whatsapp-button.version>1.0.2-SNAPSHOT</whatsapp-button.version>
+        <xterm.version>3.0.0-SNAPSHOT</xterm.version>
+        <zoomist.version>1.0.1-SNAPSHOT</zoomist.version>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.4</version>
+    </parent>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>flowing-snapshots</id>
+            <url>https://maven.flowingcode.com/snapshots</url>
+        </repository>
+        <repository>
+            <id>Vaadin Directory</id>
+            <url>https://maven.vaadin.com/vaadin-addons</url>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+        <repository>
+            <id>vaadin-prerelease</id>
+            <url>https://maven.vaadin.com/vaadin-prereleases</url>
+        </repository>
+    </repositories>
+    
+    <pluginRepositories>
+        <pluginRepository>
+            <id>vaadin-prerelease</id>
+            <url>https://maven.vaadin.com/vaadin-prereleases</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-bom</artifactId>
+                <version>${vaadin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>2.3.2</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.xml.bind</groupId>
+                <artifactId>jakarta.xml.bind-api</artifactId>
+                <version>2.3.2</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.activation</groupId>
+                <artifactId>jakarta.activation-api</artifactId>
+                <version>1.2.2</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons.demo</groupId>
+            <artifactId>commons-demo</artifactId>
+            <version>${commons-demo.version}</version>
+        </dependency>
+        
+        <!-- ADDONS -->
+
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>badge-list-addon</artifactId>
+            <version>${badge-list.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>badge-list-addon</artifactId>
+            <version>${badge-list.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.addons.carousel</groupId>
+            <artifactId>carousel-addon</artifactId>
+            <version>${carousel.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.addons.carousel</groupId>
+            <artifactId>carousel-addon</artifactId>
+            <version>${carousel.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>chat-assistant-addon</artifactId>
+            <version>${chat-assistant.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>chat-assistant-addon</artifactId>
+            <version>${chat-assistant.version}</version>
+            <classifier>demo</classifier>
+        </dependency>    
+
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>day-of-week-selector-addon</artifactId>
+            <version>${day-of-week-selector.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>day-of-week-selector-addon</artifactId>
+            <version>${day-of-week-selector.version}</version>
+            <classifier>demo</classifier>            
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons.chipfield</groupId>
+            <artifactId>chipfield-addon</artifactId>
+            <version>${chipfield.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons.chipfield</groupId>
+            <artifactId>chipfield-addon</artifactId>
+            <version>${chipfield.version}</version>
+            <classifier>demo</classifier>            
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>enhanced-tabs-addon</artifactId>
+            <version>${enhanced-tabs.version}</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>enhanced-tabs-addon</artifactId>
+            <version>${enhanced-tabs.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>error-window-vaadin</artifactId>
+            <version>${error-window.version}</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>error-window-vaadin</artifactId>
+            <version>${error-window.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+    
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>extended-login</artifactId>
+            <version>${extended-login.version}</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>extended-login</artifactId>
+            <version>${extended-login.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>filterable-layout-addon</artifactId>
+            <version>${filterable-layout.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>filterable-layout-addon</artifactId>
+            <version>${filterable-layout.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>flip-card-addon</artifactId>
+            <version>${flip-card.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>flip-card-addon</artifactId>
+            <version>${flip-card.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>font-awesome-iron-iconset</artifactId>
+            <version>${font-awesome-iron-iconset.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>font-awesome-iron-iconset</artifactId>
+            <version>${font-awesome-iron-iconset.version}</version>
+            <classifier>demo</classifier>
+        </dependency>        
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>github-buttons-addon</artifactId>
+            <version>${github-buttons.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>github-buttons-addon</artifactId>
+            <version>${github-buttons.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>google-maps</artifactId>
+            <version>${google-maps.version}</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>google-maps</artifactId>
+            <version>${google-maps.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>granite-alert</artifactId>
+            <version>${granite-alert.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>granite-alert</artifactId>
+            <version>${granite-alert.version}</version>
+            <classifier>demo</classifier>
+        </dependency>        
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>grid-exporter-addon</artifactId>
+            <version>${grid-exporter.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>grid-exporter-addon</artifactId>
+            <version>${grid-exporter.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>grid-helpers</artifactId>
+            <version>${grid-helpers.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>grid-helpers</artifactId>
+            <version>${grid-helpers.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+    
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>image-comparison-slider-addon</artifactId>
+            <version>${image-comparison-slider.version}</version>
+        </dependency>        
+            
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>image-comparison-slider-addon</artifactId>
+            <version>${image-comparison-slider.version}</version>
+            <classifier>demo</classifier>
+        </dependency>    
+
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>orgchart-addon</artifactId>
+            <version>${orgchart.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>orgchart-addon</artifactId>
+            <version>${orgchart.version}</version>
+            <classifier>demo</classifier>            
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>rss-items</artifactId>
+            <version>${rss-items.version}</version>            
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>rss-items</artifactId>
+            <version>${rss-items.version}</version>            
+            <classifier>demo</classifier>            
+        </dependency>        
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>share-easy-addon</artifactId>
+            <version>${share-easy.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>share-easy-addon</artifactId>
+            <version>${share-easy.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>simple-timer</artifactId>
+            <version>${simple-timer.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>simple-timer</artifactId>
+            <version>${simple-timer.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>twincolgrid</artifactId>
+            <version>${twincolgrid.version}</version>                    
+        </dependency>
+    
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>twincolgrid</artifactId>
+            <version>${twincolgrid.version}</version>
+            <classifier>demo</classifier>            
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>vertical-menu</artifactId>
+            <version>${vertical-menu.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>vertical-menu</artifactId>
+            <version>${vertical-menu.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>wcstories-addon</artifactId>
+            <version>${wcstories.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>wcstories-addon</artifactId>
+            <version>${wcstories.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>whatsapp-button-addon</artifactId>
+            <version>${whatsapp-button.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>whatsapp-button-addon</artifactId>
+            <version>${whatsapp-button.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>xterm-console</artifactId>
+            <version>${xterm.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flowingcode.addons</groupId>
+            <artifactId>xterm-console</artifactId>
+            <version>${xterm.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>year-month-calendar</artifactId>
+            <version>${calendar.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>year-month-calendar</artifactId>
+            <version>${calendar.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>zoomist-addon</artifactId>
+            <version>${zoomist.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>zoomist-addon</artifactId>
+            <version>${zoomist.version}</version>
+            <classifier>demo</classifier>
+        </dependency>
+        
+        <!-- other dependencies -->
+        
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>font-awesome</artifactId>
+            <version>4.7.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- VAADIN -->
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>spring-boot:run</defaultGoal>
+        <finalName>${project.artifactId}</finalName>
+        
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- Clean build and startup time for Vaadin apps sometimes may exceed
+                     the default Spring Boot's 30sec timeout.  -->
+                <configuration>
+                    <wait>500</wait>
+                    <maxAttempts>240</maxAttempts>
+                </configuration>
+            </plugin>
+                        
+            <!--
+                Take care of synchronizing java dependencies and imports in
+                package.json and main.js files.
+                It also creates webpack.config.js if not exists yet.
+            -->
+            <plugin>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-maven-plugin</artifactId>
+                <configuration>
+                    <requireHomeNodeExec>true</requireHomeNodeExec>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-frontend</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <!-- Production mode is activated using -Pproduction -->
+            <id>production</id>
+            <properties>
+                <vaadin.productionMode>true</vaadin.productionMode>
+            </properties>
+
+            <dependencies>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>flow-server-production-mode</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>vaadin-core</artifactId>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>com.vaadin</groupId>
+                            <artifactId>vaadin-dev</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+            </dependencies>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <configuration>
+                            <jvmArguments>-Dvaadin.productionMode</jvmArguments>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>com.vaadin</groupId>
+                        <artifactId>vaadin-maven-plugin</artifactId>
+                        <version>${vaadin.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>build-frontend</goal>
+                                </goals>
+                                <phase>compile</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>native</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.graalvm.buildtools</groupId>
+                        <artifactId>native-maven-plugin</artifactId>
+                        <configuration>
+                            <mainClass>com.flowingcode.Application</mainClass>
+                            <imageName>native-image</imageName>
+                            <buildArgs>
+                                -march=native 
+                                --enable-monitoring=jmxserver
+                                --enable-monitoring=jmxclient
+                                --enable-monitoring=jvmstat
+                                --enable-monitoring=all
+                                --no-fallback
+                                -H:+BuildReport
+                                -Ob
+                            </buildArgs>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
+</project>
