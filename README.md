@@ -6,7 +6,8 @@ Reproducer for https://github.com/oracle/graal/issues/8725
 3. Open http://127.0.0.1:8080/ in your browser
 4. Take note of the following lines from the log
 
-![image](https://github.com/FlowingCode/AddonsDemo/assets/11554739/8f7ca703-6c74-4171-a7b8-9b59389bdee1)
+![image](https://github.com/FlowingCode/AddonsDemo-graal8725/assets/11554739/8a169301-683d-47f8-b92d-a688115ec083)
+
 
 
 (If it says "Metadata count: 27" with no "No package metadata" message, recompile)
@@ -19,7 +20,8 @@ Reproducer for https://github.com/oracle/graal/issues/8725
 ```
 2024-04-17T20:29:51.281-03:00  WARN 11516 --- [nio-8080-exec-3] c.flowingcode.vaadin.addons.DemoLayout   : Metadata count: 27
 ```
-![image](https://github.com/FlowingCode/AddonsDemo/assets/11554739/2b6aeef5-0934-44be-bcc7-8b36c5e5d720)
+![image](https://github.com/FlowingCode/AddonsDemo-graal8725/assets/11554739/46fcac72-008c-48f6-b101-35a8a965b97a)
+
 
 
 8. Repeat steps 1-4. Observe that a different set of classes has "no package metadata"
